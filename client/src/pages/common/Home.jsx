@@ -8,6 +8,7 @@ import Cities from "./Cities";
 import Testimonials from "./Testimonials";
 import TrustSafety from "./TrustSafety";
 import FAQ from "./FAQ";
+import Footer from "./Footer";
 import { ShieldCheck, MapPin, Zap, Headphones } from "lucide-react";
 
 export default function Home() {
@@ -56,6 +57,7 @@ export default function Home() {
       <Testimonials />
       <TrustSafety />
       <FAQ />
+      <Footer />
     </div>
   );
 }

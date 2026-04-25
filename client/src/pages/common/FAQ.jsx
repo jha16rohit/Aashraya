@@ -36,7 +36,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="bg-[#f5f2ed] pt-10">
+    <div className="bg-[#f5f2ed] pt-10 pb-10">
 
       {/* 🔥 SAME ALIGNMENT AS CITIES (LEFT) */}
       <div className="max-w-7xl mx-auto px-6">
