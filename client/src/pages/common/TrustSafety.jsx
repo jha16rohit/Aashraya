@@ -68,14 +68,22 @@ export default function TrustSafety() {
               </div>
 
               {/* Logo circle — overlapping the left edge of the image */}
-              <div className="absolute left-30 top-1/4 -translate-x-1/2 -translate-y-1/2
-                              w-[220px] h-[220px] rounded-full
-                              bg-[#f5f0e8] border-[5px] border-[#EAD9A7]
-                            //   flex items-center justify-center shadow-2xl z-10">
+              <div className="absolute
+top-8
+left-8
+z-20
+w-[220px]
+h-[90px]
+bg-[#f5f0e8]
+border-[4px]
+border-[#EAD9A7]
+rounded-full
+flex items-center justify-center
+shadow-2xl">
                 <img
-                  src="/logo.png"
+                  src="/logo-1.png"
                   alt="Aashraya"
-                  className="w-[68%] object-contain"
+                  className="w-[100%] object-contain"
                 />
               </div>
             </div>

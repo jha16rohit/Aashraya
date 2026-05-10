@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,62 +17,61 @@ export default function Navbar() {
     <div className="fixed top-0 w-full flex justify-center z-50">
       <div
         className={`w-[95%] max-w-7xl flex items-center justify-between px-6 py-3 
-  transition-all duration-300 border-2 rounded-full
-  ${
-    scrolled
-      ? "bg-white/40  shadow-md mt-3 border-gray-200"
-      : "bg-transparent mt-6 border-white/40"
-  }`}
+        transition-all duration-300 border-2 rounded-full
+        ${
+          scrolled
+            ? "bg-white/40 shadow-md mt-3 border-gray-200 backdrop-blur"
+            : "bg-transparent mt-6 border-white/40"
+        }`}
       >
-  {/* Logo */}
-<div className="flex items-center gap-3">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-white/30">
+            <img src="/logo.png" alt="Aashraya Logo" />
+          </div>
 
-  {/* Logo Image */}
-  <div className="w-10 h-10 flex items-center justify-center 
-                  rounded-full overflow-hidden border border-white/30">
-    <img
-      src="/logo.png"
-      alt="Aashraya Logo"
-      className="w-full h-full object-cover"
-    />
-  </div>
-
-  {/* Brand Text */}
-  <div className="leading-tight">
-    
-    {/* Brand Name */}
-    <h1 className="text-lg font-semibold text-white md:text-black">
-      Aashraya
-    </h1>
-
-    {/* Tagline */}
-    <p className="text-[10px] tracking-widest text-white/70 md:text-green-900">
-      FIND • LIVE • BELONG
-    </p>
-
-  </div>
-
-</div>
+          <div className="leading-tight">
+            <h1 className="text-lg font-semibold text-white md:text-black">
+              Aashraya
+            </h1>
+            <p className="text-[10px] tracking-widest text-white/70 md:text-green-900">
+              FIND • LIVE • BELONG
+            </p>
+          </div>
+        </Link>
 
         {/* Links */}
         <div className="hidden md:flex gap-8 text-sm text-white md:text-gray-700">
-          <a className="hover:text-black cursor-pointer">Search</a>
-          <a className="hover:text-black cursor-pointer">How It Works</a>
-          <a className="hover:text-black cursor-pointer">Why Us</a>
-          <a className="hover:text-black cursor-pointer">FAQ</a>
+          <Link to="/search" className="hover:text-black">Search</Link>
+          <Link to="/how-it-works" className="hover:text-black">How It Works</Link>
+          <Link to="/why-us" className="hover:text-black">Why Us</Link>
+          <Link to="/faq" className="hover:text-black">FAQ</Link>
         </div>
 
         {/* Buttons */}
         <div className="flex items-center gap-3">
-          <button className="text-sm text-white md:text-gray-700">Login</button>
+          
+          {/* Register */}
+          <Link to="/register">
+            <button className="text-sm text-white">
+              Register
+            </button>
+          </Link>
 
-          <button className="px-4 py-1.5 text-sm border border-gray-300 rounded-full bg-white/70 backdrop-blur">
-            List Property
-          </button>
+          {/* List Property */}
+          <Link to="/list-property">
+            <button className="px-4 py-1.5 text-sm border border-gray-300 rounded-full bg-white/70 backdrop-blur">
+              List Property
+            </button>
+          </Link>
 
-          <button className="px-5 py-2 text-sm bg-black text-white rounded-full">
-            Find Room
-          </button>
+          {/* Find Room */}
+          <Link to="/search">
+            <button className="px-5 py-2 text-sm bg-black text-white rounded-full">
+              Find Room
+            </button>
+          </Link>
+
         </div>
       </div>
     </div>
